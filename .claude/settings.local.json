@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch:*)",
+      "Bash(.specify/scripts/powershell/check-prerequisites.ps1:*)",
+      "Bash(.specify/scripts/powershell/setup-plan.ps1:*)",
+      "WebSearch",
+      "Bash(npx @docusaurus/init@latest:*)",
+      "Bash(rd:*)",
+      "Bash(rm:*)",
+      "Bash(npm start)",
+      "Bash(npm start:*)",
+      "Bash(npm run clear)",
+      "Bash(taskkill:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(uvicorn:*)",
+      "Bash(mkdir:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
