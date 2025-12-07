@@ -20,7 +20,7 @@
   scripts: [
     'https://cdn.jsdelivr.net/npm/@anthropic-ai/chatkit@latest/dist/chatkit.js',
   ],
-  organizationName: 'Anthropic', // Usually your GitHub org/user name.
+  organizationName: 'Anthropic', // Usually your GitHub org/user name. 
   projectName: 'humanoid-robotics', // Usually your repo name.
 
   presets: [
@@ -61,11 +61,12 @@
         logo: {
           alt: 'Physical AI',
           src: 'img/logo.svg',
+          href: '/',
         },
         items: [
           {
             type: 'doc',
-            docId: 'chapter-1-introduction-to-physical-ai',
+            docId: 'intro',
             position: 'left',
             label: 'Curriculum',
           },
@@ -95,7 +96,7 @@
             items: [
               {
                 label: 'Read-Books',
-                to: '/docs/chapter-1-introduction-to-physical-ai',
+                to: '/docs/intro',
               },
             ],
           },
