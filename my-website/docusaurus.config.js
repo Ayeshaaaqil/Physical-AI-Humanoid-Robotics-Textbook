@@ -4,8 +4,8 @@
 (module.exports = {
   title: 'Physical AI & Humanoid Robotics Curriculum and Capstone Program',
   tagline: 'A comprehensive curriculum for building intelligent humanoid robots.',
-  url: 'https://your-robotics-curriculum.com',
-  baseUrl: '/',
+  url: 'https://ayeshaaaqil.github.io',
+  baseUrl: '/Physical-AI-Humanoid-Robotics-Textbook/',
   onBrokenLinks: 'throw',
   markdown: { hooks: { onBrokenMarkdownLinks: 'warn' } },
   headTags: [
@@ -20,8 +20,8 @@
   scripts: [
     'https://cdn.jsdelivr.net/npm/@anthropic-ai/chatkit@latest/dist/chatkit.js',
   ],
-  organizationName: 'Anthropic', // Usually your GitHub org/user name. 
-  projectName: 'humanoid-robotics', // Usually your repo name.
+  organizationName: 'ayeshaaaqil', // Usually your GitHub org/user name. 
+  projectName: 'Physical-AI-Humanoid-Robotics-Textbook', // Usually your repo name.
 
   presets: [
     [
@@ -31,13 +31,13 @@
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/Anthropic/humanoid-robotics/edit/main/my-website/',
+          editUrl: 'https://github.com/ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook/edit/main/my-website/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/Anthropic/humanoid-robotics/edit/main/my-website/blog/',
+            'https://github.com/ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook/edit/main/my-website/blog/',
           onInlineAuthors: 'ignore', // You can also define authors directly in docusaurus.config.js
         },
         theme: {
@@ -82,7 +82,7 @@
             position: 'left',
           },
           {
-            href: 'https://github.com/Anthropic/humanoid-robotics',
+            href: 'https://github.com/ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook',
             label: 'GitHub',
             position: 'right',
           },
@@ -126,7 +126,7 @@
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/Anthropic/humanoid-robotics',
+                href: 'https://github.com/ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook',
               },
             ],
           },
