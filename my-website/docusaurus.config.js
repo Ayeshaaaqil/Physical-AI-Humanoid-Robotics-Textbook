@@ -1,27 +1,23 @@
-
-// With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
-(module.exports = {
+module.exports = {
   title: 'Physical AI & Humanoid Robotics Curriculum and Capstone Program',
   tagline: 'A comprehensive curriculum for building intelligent humanoid robots.',
-  url: 'https://your-robotics-curriculum.com',
-  baseUrl: '/',
+  url: 'https://ayeshaaaqil.github.io',                                    // Your GitHub Pages URL
+  baseUrl: '/Physical-AI-Humanoid-Robotics-Textbook/',                      // Repo name + trailing slash
+  trailingSlash: true,                                                     // Must for GitHub Pages
   onBrokenLinks: 'throw',
-  markdown: { hooks: { onBrokenMarkdownLinks: 'warn' } },
-  headTags: [
-    // You can install @chatkit/react via npm and import it directly
-    // or use a CDN as an alternative for quick setup
-    // If using npm, remove this headTag and ensure @chatkit/react is in package.json
-    // The Docusaurus build process will handle bundling.
-    // We are not adding the CDN here directly, instead relying on npm install and import in ChatKitWidget.
-  ],
+  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+
+  // GitHub deployment config (yeh dono bilkul exact hone chahiye)
+  organizationName: 'ayeshaaaqil',                 // lowercase username
+  projectName: 'Physical-AI-Humanoid-Robotics-Textbook', // exact repo name
+
   clientModules: [require.resolve('./src/theme/Root.js')],
+
   scripts: [
     'https://cdn.jsdelivr.net/npm/@anthropic-ai/chatkit@latest/dist/chatkit.js',
   ],
-  organizationName: 'Anthropic', // Usually your GitHub org/user name.
-  projectName: 'humanoid-robotics', // Usually your repo name.
 
   presets: [
     [
@@ -30,15 +26,11 @@
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/Anthropic/humanoid-robotics/edit/main/my-website/',
+          editUrl: 'https://github.com/Ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook/edit/main/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/Anthropic/humanoid-robotics/edit/main/my-website/blog/',
-          onInlineAuthors: 'ignore', // You can also define authors directly in docusaurus.config.js
+          editUrl: 'https://github.com/Ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook/edit/main/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -57,9 +49,8 @@
       },
       navbar: {
         title: 'Physical AI Robotics',
-
         logo: {
-          alt: 'Physical AI',
+          alt: 'Physical AI Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -69,19 +60,11 @@
             position: 'left',
             label: 'Curriculum',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/chatbot', label: 'Chatbot', position: 'left' },
+          { to: '/login', label: 'Login', position: 'left' },
           {
-            to: '/chatbot',
-            label: 'Chatbot',
-            position: 'left',
-          },
-          {
-            to: '/login',
-            label: 'Login',
-            position: 'left',
-          },
-          {
-            href: 'https://github.com/Anthropic/humanoid-robotics',
+            href: 'https://github.com/Ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook',
             label: 'GitHub',
             position: 'right',
           },
@@ -94,7 +77,7 @@
             title: 'Docs',
             items: [
               {
-                label: 'Read-Books',
+                label: 'Curriculum',
                 to: '/docs/chapter-1-introduction-to-physical-ai',
               },
             ],
@@ -108,7 +91,7 @@
               },
               {
                 label: 'Discord',
-                href: 'https://discord.gg/your-discord-invite', // Placeholder for Discord
+                href: 'https://discord.gg/your-discord-invite',
               },
               {
                 label: 'Twitter',
@@ -119,19 +102,15 @@
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              { label: 'Blog', to: '/blog' },
               {
                 label: 'GitHub',
-                href: 'https://github.com/Anthropic/humanoid-robotics',
+                href: 'https://github.com/Ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook',
               },
             ],
           },
         ],
-        copyright: '© Physical AI & Agentic World /n created by AYESHA AAQIL'
-        ,
+        copyright: `© ${new Date().getFullYear()} Physical AI & Agentic World • Created by Ayesha Aaqil`,
       },
     }),
-});
+};
