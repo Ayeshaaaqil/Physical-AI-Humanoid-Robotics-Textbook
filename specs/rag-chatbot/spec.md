@@ -1,3 +1,38 @@
+<<<<<<< HEAD
+# RAG Chatbot Feature Specification
+
+## Overview
+This document outlines the requirements for integrating a RAG (Retrieval Augmented Generation) chatbot into the Docusaurus-based robotics curriculum website. The chatbot will allow users to ask questions about the book content and receive accurate answers based on the retrieved information.
+
+## Goals
+- Provide an interactive way for users to get answers directly from the book content.
+- Enhance user experience by offering quick access to information.
+- Support both general queries and queries based on selected text from the book.
+
+## In-Scope
+- FastAPI backend for RAG logic and API endpoints.
+- Qdrant integration for vector database and retrieval.
+- OpenAI LLM integration for response generation.
+- Docusaurus frontend integration for a floating chatbot widget.
+- Text selection functionality to feed context to the chatbot.
+- Ingestion script for processing Docusaurus markdown files into Qdrant.
+- Basic chat history management.
+
+## Out-of-Scope
+- Advanced user authentication for the chatbot.
+- Complex UI/UX features beyond a basic floating widget.
+- Integration with other knowledge bases or external APIs (beyond Qdrant/OpenAI).
+- Real-time chat features (e.g., streaming responses are not a primary focus).
+
+## Functional Requirements
+
+### FR-1: Chatbot Widget
+- The chatbot should appear as a floating widget on the Docusaurus site.
+- Users should be able to toggle the visibility of the widget.
+- The widget should have an input field for typing questions.
+- The widget should display the chatbot's responses.
+
+### FR-2: General Query
 # RAG Chatbot Feature Specification
 
 ## Overview

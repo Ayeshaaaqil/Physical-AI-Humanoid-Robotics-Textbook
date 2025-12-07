@@ -120,4 +120,3 @@ This document outlines the tasks required to implement the RAG Chatbot feature, 
 - **Acceptance Criteria:**
     - Backend service is deployed and running.
     - Public API URL is obtained.
-- **Dependencies:** Task 1, Task 3, Task 4

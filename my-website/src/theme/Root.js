@@ -1,5 +1,5 @@
 import React from 'react';
-import ChatKitWidget from '../../../src/components/ChatKitWidget';
+import ChatKitWidget from '../components/ChatKitWidget';
 
 function Root({ children }) {
   return (

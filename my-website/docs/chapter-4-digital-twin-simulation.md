@@ -74,7 +74,7 @@ Simulation accelerates development by allowing:
 
 - **Warehouse automation**: Test AMRs in realistic environments
 - **Manipulation**: Train grasping policies with accurate physics
-- **Autonomous vehicles**: Simulate urban driving scenarios
+-- **Autonomous vehicles**: Simulate urban driving scenarios
 - **Computer vision**: Generate labeled datasets for object detection
 
 ### Sim-to-Real Transfer
