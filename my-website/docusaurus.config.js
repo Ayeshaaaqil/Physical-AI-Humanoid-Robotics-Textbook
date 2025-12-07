@@ -13,7 +13,7 @@ module.exports = {
   organizationName: 'ayeshaaaqil',                 // lowercase username
   projectName: 'Physical-AI-Humanoid-Robotics-Textbook', // exact repo name
 
-  clientModules: [require.resolve('./src/theme/Root.js')],
+  themes: [require.resolve('./src/theme/Root.js')],
 
   scripts: [
     'https://cdn.jsdelivr.net/npm/@anthropic-ai/chatkit@latest/dist/chatkit.js',
