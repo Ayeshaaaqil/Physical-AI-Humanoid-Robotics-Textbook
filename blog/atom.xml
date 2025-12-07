@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://your-robotics-curriculum.com/blog</id>
+    <title>Physical AI &amp; Humanoid Robotics Curriculum and Capstone Program Blog</title>
+    <updated>2025-12-06T14:55:03.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://your-robotics-curriculum.com/blog"/>
+    <subtitle>Physical AI &amp; Humanoid Robotics Curriculum and Capstone Program Blog</subtitle>
+    <icon>https://your-robotics-curriculum.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[The Dawn of Embodied AI - An Introduction to Humanoid Robotics]]></title>
+        <id>https://your-robotics-curriculum.com/blog/ai-humanoid-intro</id>
+        <link href="https://your-robotics-curriculum.com/blog/ai-humanoid-intro"/>
+        <updated>2025-12-06T14:55:03.000Z</updated>
+        <summary type="html"><![CDATA[The Dawn of Embodied AI]]></summary>
+        <content type="html"><![CDATA[<div class="blog-hero"><img src="https://images.unsplash.com/photo-1596204593853-96b345f1b2b8?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Humanoid robot in a futuristic lab" class="blog-hero__image"><div class="blog-hero__overlay"></div><div class="blog-hero__content"><h1 class="blog-hero__title">The Dawn of Embodied AI</h1><p class="blog-hero__subtitle">An Introduction to Physical AI &amp; Humanoid Robotics</p></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="unlocking-the-physical-world">Unlocking the Physical World<a href="https://your-robotics-curriculum.com/blog/ai-humanoid-intro#unlocking-the-physical-world" class="hash-link" aria-label="Direct link to Unlocking the Physical World" title="Direct link to Unlocking the Physical World" translate="no">​</a></h2>
+<p>For decades, Artificial Intelligence has largely resided within the digital realm. From complex algorithms optimizing search results to neural networks powering recommendation engines, AI's impact has been profound yet often intangible. However, a new frontier is rapidly emerging: <strong>Physical AI</strong>.</p>
+<p>Physical AI is about bringing intelligence out of the screen and into the real world, enabling machines to perceive, reason, and act within dynamic physical environments. The most compelling manifestation of this vision is the rise of <strong>humanoid robotics</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-humanoid-robotics">Why Humanoid Robotics?<a href="https://your-robotics-curriculum.com/blog/ai-humanoid-intro#why-humanoid-robotics" class="hash-link" aria-label="Direct link to Why Humanoid Robotics?" title="Direct link to Why Humanoid Robotics?" translate="no">​</a></h3>
+<p>Humanoid robots, with their human-like form factors, are uniquely positioned to operate in environments designed for humans. This goes beyond simple automation; it involves true embodied intelligence capable of:</p>
+<ul>
+<li class=""><strong>Dexterous Manipulation:</strong> Performing complex tasks that require fine motor skills.</li>
+<li class=""><strong>Autonomous Navigation:</strong> Moving through unstructured and dynamic spaces.</li>
+<li class=""><strong>Natural Interaction:</strong> Communicating and collaborating with humans using speech and gestures.</li>
+<li class=""><strong>Perception &amp; Understanding:</strong> Interpreting sensory data (vision, touch, sound) to make informed decisions.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-technology-stack">The Technology Stack<a href="https://your-robotics-curriculum.com/blog/ai-humanoid-intro#the-technology-stack" class="hash-link" aria-label="Direct link to The Technology Stack" title="Direct link to The Technology Stack" translate="no">​</a></h2>
+<p>Building an intelligent humanoid robot is a multidisciplinary challenge, drawing upon advancements in several key areas. Our curriculum explores a comprehensive technology stack, integrating cutting-edge tools and platforms:</p>
+<table><thead><tr><th>Domain</th><th>Tools &amp; Platforms</th></tr></thead><tbody><tr><td>Robot OS</td><td>ROS 2 + Python</td></tr><tr><td>Simulation</td><td>Gazebo • Unity • Isaac Sim</td></tr><tr><td>Perception</td><td>RealSense • LiDAR • IMU</td></tr><tr><td>Navigation</td><td>SLAM • Nav2</td></tr><tr><td>LLM Interface</td><td>Whisper • GPT</td></tr><tr><td>Hardware</td><td>Jetson Orin Nano</td></tr></tbody></table>
+<div class="image-gallery"><img src="https://images.unsplash.com/photo-1601131777018-b2230a1c7c22?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="ROS 2 logo and code snippets"><img src="https://images.unsplash.com/photo-1628120616858-a5b4b1a4a5b4?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="NVIDIA Jetson board"><img src="https://images.unsplash.com/photo-1549488344-93774880c5f2?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Robots in a factory setting"></div>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p><strong>Note on Simulation:</strong> High-fidelity simulators like Isaac Sim are crucial for rapid prototyping and testing of complex robotic systems before deployment on expensive hardware.</p></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-capstone-vision-autonomous-humanoids">The Capstone Vision: Autonomous Humanoids<a href="https://your-robotics-curriculum.com/blog/ai-humanoid-intro#the-capstone-vision-autonomous-humanoids" class="hash-link" aria-label="Direct link to The Capstone Vision: Autonomous Humanoids" title="Direct link to The Capstone Vision: Autonomous Humanoids" translate="no">​</a></h2>
+<p>Our capstone project culminates in the development of an <strong>Autonomous Humanoid</strong> capable of integrating diverse AI capabilities:</p>
+<ol>
+<li class=""><strong>Voice Input → Whisper:</strong> Processing human speech commands.</li>
+<li class=""><strong>Planning → GPT Cognitive Agent:</strong> High-level task planning and decision-making.</li>
+<li class=""><strong>Navigation → Nav2 + SLAM:</strong> Real-time localization, mapping, and path planning.</li>
+<li class=""><strong>Vision → Isaac ROS + RealSense:</strong> Advanced object detection, recognition, and scene understanding.</li>
+<li class=""><strong>Manipulation → ROS Controllers:</strong> Precise control of robotic limbs for interaction.</li>
+<li class=""><strong>Safe Real-World Task Execution:</strong> Ensuring robust and safe operation in dynamic environments.</li>
+</ol>
+<p><img decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1526367790930-01046894c264" alt="Humanoid robot walking in an outdoor environment" class="img_ev3q"></p>
+<p>This is not just about programming robots; it's about engineering the next generation of intelligent agents that will live and work alongside us, transforming industries from healthcare to manufacturing, and pushing the boundaries of what AI can achieve. Join us as we build the future, one intelligent step at a time.</p>]]></content>
+        <category label="AI" term="AI"/>
+        <category label="Robotics" term="Robotics"/>
+        <category label="Humanoids" term="Humanoids"/>
+        <category label="PhysicalAI" term="PhysicalAI"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Welcome to Physical AI & Humanoid Robotics]]></title>
+        <id>https://your-robotics-curriculum.com/blog/welcome</id>
+        <link href="https://your-robotics-curriculum.com/blog/welcome"/>
+        <updated>2025-12-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to Physical AI]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Welcome to Physical AI" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="welcome-to-the-future-of-robotics">Welcome to the Future of Robotics<a href="https://your-robotics-curriculum.com/blog/welcome#welcome-to-the-future-of-robotics" class="hash-link" aria-label="Direct link to Welcome to the Future of Robotics" title="Direct link to Welcome to the Future of Robotics" translate="no">​</a></h2>
+<p>This blog introduces you to <strong>Physical AI &amp; Humanoid Robotics</strong> — a curriculum designed to bridge <strong>digital intelligence and physical embodiment</strong>. Here, students explore how <strong>AI agents</strong> can perceive, reason, and act in real environments.</p>
+<p>Through this program, you will learn to:</p>
+<p>✅ Control robots using <strong>ROS 2</strong><br>
+<!-- -->✅ Build digital twins in <strong>Gazebo &amp; Unity</strong><br>
+<!-- -->✅ Train humanoids using <strong>NVIDIA Isaac Sim</strong><br>
+<!-- -->✅ Integrate <strong>Vision-Language-Action pipelines</strong> with GPT models</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-our-blog-works">How Our Blog Works<a href="https://your-robotics-curriculum.com/blog/welcome#how-our-blog-works" class="hash-link" aria-label="Direct link to How Our Blog Works" title="Direct link to How Our Blog Works" translate="no">​</a></h2>
+<p>All blog posts are organized to provide:</p>
+<ul>
+<li class="">Step-by-step tutorials for <strong>Physical AI modules</strong></li>
+<li class="">Research insights from humanoid robotics labs</li>
+<li class="">Case studies of autonomous robot deployments</li>
+<li class="">Detailed guides on <strong>edge computing and sensor integration</strong></li>
+</ul>
+<p>You can organize your posts using <strong>tags</strong>, such as:</p>
+<ul>
+<li class=""><code>physical-ai</code></li>
+<li class=""><code>humanoid</code></li>
+<li class=""><code>simulation</code></li>
+<li class=""><code>ros2</code></li>
+<li class=""><code>vla</code></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="adding-content">Adding Content<a href="https://your-robotics-curriculum.com/blog/welcome#adding-content" class="hash-link" aria-label="Direct link to Adding Content" title="Direct link to Adding Content" translate="no">​</a></h2>
+<p>To add new blog posts, simply create Markdown files in the <code>blog</code> directory:</p>
+<ul>
+<li class=""><code>2025-12-05-introduction-to-physical-ai.md</code></li>
+<li class=""><code>2025-12-10-ros2-basics/index.md</code></li>
+</ul>
+<p>You can also create folders for each post to store <strong>images and media</strong>, which makes content management easier.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="publishing-your-posts">Publishing Your Posts<a href="https://your-robotics-curriculum.com/blog/welcome#publishing-your-posts" class="hash-link" aria-label="Direct link to Publishing Your Posts" title="Direct link to Publishing Your Posts" translate="no">​</a></h2>
+<ul>
+<li class="">Author information is defined in the post front matter or <code>authors.yml</code>.</li>
+<li class="">Dates can be extracted automatically from filenames.</li>
+<li class="">You can add <strong>hero images</strong> to every blog post for a professional look.</li>
+<li class="">Use <strong>callout boxes</strong> to highlight important notes, tips, and warnings.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="final-note">Final Note<a href="https://your-robotics-curriculum.com/blog/welcome#final-note" class="hash-link" aria-label="Direct link to Final Note" title="Direct link to Final Note" translate="no">​</a></h2>
+<p>This blog is the <strong>official companion</strong> to the Physical AI course. It will guide you through building <strong>embodied intelligence systems</strong> — from simulation to real-world humanoid robots.</p>
+<p><strong>Stay tuned and start your journey into the future of AI-powered robotics!</strong> 🤖</p>]]></content>
+        <category label="physical-ai" term="physical-ai"/>
+        <category label="robotics" term="robotics"/>
+        <category label="humanoid" term="humanoid"/>
+        <category label="ros2" term="ros2"/>
+        <category label="nvidia-isaac" term="nvidia-isaac"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MDX Blog Post]]></title>
+        <id>https://your-robotics-curriculum.com/blog/mdx-blog-post</id>
+        <link href="https://your-robotics-curriculum.com/blog/mdx-blog-post"/>
+        <updated>2021-08-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></summary>
+        <content type="html"><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features" target="_blank" rel="noopener noreferrer" class="">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer" class="">MDX</a>.</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>Use the power of React to create interactive blog posts.</p><div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token operator" style="color:rgb(137, 221, 255)">&lt;</span><span class="token plain">button onClick</span><span class="token operator" style="color:rgb(137, 221, 255)">=</span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:rgb(137, 221, 255)">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:rgb(130, 170, 255)">alert</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token string" style="color:rgb(195, 232, 141)">'button clicked!'</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token operator" style="color:rgb(137, 221, 255)">&gt;</span><span class="token maybe-class-name">Click</span><span class="token plain"> me</span><span class="token operator" style="color:rgb(137, 221, 255)">!</span><span class="token operator" style="color:rgb(137, 221, 255)">&lt;</span><span class="token operator" style="color:rgb(137, 221, 255)">/</span><span class="token plain">button</span><span class="token operator" style="color:rgb(137, 221, 255)">&gt;</span><br></span></code></pre></div></div><button>Click me!</button></div></div>]]></content>
+        <author>
+            <name>Sébastien Lorber</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <category label="docusaurus" term="docusaurus"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Long Blog Post]]></title>
+        <id>https://your-robotics-curriculum.com/blog/long-blog-post</id>
+        <link href="https://your-robotics-curriculum.com/blog/long-blog-post"/>
+        <updated>2019-05-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This is the summary of a very long blog post,]]></summary>
+        <content type="html"><![CDATA[<p>This is the summary of a very long blog post,</p>
+<p>Use a <code>&lt;!--</code> <code>truncate</code> <code>--&gt;</code> comment to limit blog post size in the list view.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
+        <author>
+            <name>Endilie Yacop Sucipto</name>
+            <uri>https://github.com/endiliey</uri>
+        </author>
+        <category label="hello" term="hello"/>
+        <category label="docusaurus" term="docusaurus"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Rise of Physical AI & Humanoid Robotics]]></title>
+        <id>https://your-robotics-curriculum.com/blog/physical-ai-introduction</id>
+        <link href="https://your-robotics-curriculum.com/blog/physical-ai-introduction"/>
+        <updated>2019-05-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Advanced Humanoid Robot]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Advanced Humanoid Robot" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="from-digital-ai-to-embodied-intelligence">From Digital AI to Embodied Intelligence<a href="https://your-robotics-curriculum.com/blog/physical-ai-introduction#from-digital-ai-to-embodied-intelligence" class="hash-link" aria-label="Direct link to From Digital AI to Embodied Intelligence" title="Direct link to From Digital AI to Embodied Intelligence" translate="no">​</a></h2>
+<p>Artificial Intelligence is moving beyond screens and chatbots into the physical world through <strong>Physical AI</strong> — intelligent systems capable of <strong>seeing, thinking, navigating, and acting</strong> inside real environments.</p>
+<p>Humanoid robots now combine perception, reasoning, and control to:</p>
+<p>✅ Interpret human voice commands<br>
+<!-- -->✅ Navigate spaces using SLAM<br>
+<!-- -->✅ Identify objects using depth cameras<br>
+<!-- -->✅ Perform physical manipulation safely</p>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1581093577421-d768ad4bc6de?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Robotics Simulation Lab" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-technology-stack-behind-physical-ai">The Technology Stack Behind Physical AI<a href="https://your-robotics-curriculum.com/blog/physical-ai-introduction#the-technology-stack-behind-physical-ai" class="hash-link" aria-label="Direct link to The Technology Stack Behind Physical AI" title="Direct link to The Technology Stack Behind Physical AI" translate="no">​</a></h2>
+<p>Modern humanoid robotics depends on tightly integrated systems:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ros-2--robot-nervous-system">🤖 ROS 2 — Robot Nervous System<a href="https://your-robotics-curriculum.com/blog/physical-ai-introduction#-ros-2--robot-nervous-system" class="hash-link" aria-label="Direct link to 🤖 ROS 2 — Robot Nervous System" title="Direct link to 🤖 ROS 2 — Robot Nervous System" translate="no">​</a></h3>
+<p>Real-time communication between robot sensors, planners, and controllers.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-isaac-sim--gazebo">🧠 Isaac Sim &amp; Gazebo<a href="https://your-robotics-curriculum.com/blog/physical-ai-introduction#-isaac-sim--gazebo" class="hash-link" aria-label="Direct link to 🧠 Isaac Sim &amp; Gazebo" title="Direct link to 🧠 Isaac Sim &amp; Gazebo" translate="no">​</a></h3>
+<p>Photorealistic simulation environments to develop and train robots before real deployment.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-vision-sensors--lidar">👁 Vision Sensors &amp; LiDAR<a href="https://your-robotics-curriculum.com/blog/physical-ai-introduction#-vision-sensors--lidar" class="hash-link" aria-label="Direct link to 👁 Vision Sensors &amp; LiDAR" title="Direct link to 👁 Vision Sensors &amp; LiDAR" translate="no">​</a></h3>
+<p>Depth perception enabling obstacle detection, navigation, and grasp targeting.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-wishper--gpt">🗣️ Wishper &amp; GPT<a href="https://your-robotics-curriculum.com/blog/physical-ai-introduction#%EF%B8%8F-wishper--gpt" class="hash-link" aria-label="Direct link to 🗣️ Wishper &amp; GPT" title="Direct link to 🗣️ Wishper &amp; GPT" translate="no">​</a></h3>
+<p>Converting spoken commands into robotic action using intelligent planning.</p>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1546776310-eef45dd6d63c?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Robot Hand Close-up" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="vision-language-action-pipeline">Vision-Language-Action Pipeline<a href="https://your-robotics-curriculum.com/blog/physical-ai-introduction#vision-language-action-pipeline" class="hash-link" aria-label="Direct link to Vision-Language-Action Pipeline" title="Direct link to Vision-Language-Action Pipeline" translate="no">​</a></h2>
+<p>The VLA pipeline is the backbone of Physical AI:</p>
+<ol>
+<li class="">Speech captured via microphones</li>
+<li class="">Whisper converts voice to commands</li>
+<li class="">GPT plans task execution</li>
+<li class="">ROS Actions move actuators</li>
+<li class="">Sensors provide feedback loops</li>
+</ol>
+<p>This pipeline enables everyday commands like:</p>
+<blockquote>
+<p><em>"Navigate to the desk and bring me the object."</em></p>
+</blockquote>
+<hr>
+<p><img decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Humanoid Prototype" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="real-world-impact">Real-World Impact<a href="https://your-robotics-curriculum.com/blog/physical-ai-introduction#real-world-impact" class="hash-link" aria-label="Direct link to Real-World Impact" title="Direct link to Real-World Impact" translate="no">​</a></h2>
+<p>Physical AI will power robotics deployments across major industries:</p>
+<p>✅ Healthcare &amp; rehabilitation<br>
+<!-- -->✅ Smart manufacturing systems<br>
+<!-- -->✅ Search &amp; rescue operations<br>
+<!-- -->✅ Domestic robotics</p>
+<hr>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="course-capstone">Course Capstone<a href="https://your-robotics-curriculum.com/blog/physical-ai-introduction#course-capstone" class="hash-link" aria-label="Direct link to Course Capstone" title="Direct link to Course Capstone" translate="no">​</a></h2>
+<p>Students in the <strong>Physical AI &amp; Humanoid Robotics</strong> Curriculum deploy:</p>
+<ul>
+<li class="">Isaac Sim humanoid models</li>
+<li class="">Nav2 path planning pipelines</li>
+<li class="">Whisper + GPT conversational agents</li>
+<li class="">Jetson Orin on-edge inference</li>
+</ul>
+<p>Delivering <strong>true autonomous humanoid intelligence</strong>.</p>
+<hr>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="final-reflection">Final Reflection<a href="https://your-robotics-curriculum.com/blog/physical-ai-introduction#final-reflection" class="hash-link" aria-label="Direct link to Final Reflection" title="Direct link to Final Reflection" translate="no">​</a></h2>
+<p>Physical AI represents the true evolution of artificial intelligence — <strong>from thinking machines to acting machines.</strong></p>
+<p><strong>The age of embodied intelligence has begun.</strong> 🤖</p>]]></content>
+        <category label="physical-ai" term="physical-ai"/>
+        <category label="robotics" term="robotics"/>
+        <category label="humanoid" term="humanoid"/>
+        <category label="ros2" term="ros2"/>
+        <category label="nvidia-isaac" term="nvidia-isaac"/>
+    </entry>
+</feed>

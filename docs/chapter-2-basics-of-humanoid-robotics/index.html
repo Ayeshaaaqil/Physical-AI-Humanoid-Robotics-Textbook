@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-chapter-2-basics-of-humanoid-robotics" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Chapter 2 - Basics of Humanoid Robotics | Physical AI &amp; Humanoid Robotics Curriculum and Capstone Program</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://your-robotics-curriculum.com/docs/chapter-2-basics-of-humanoid-robotics"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Chapter 2 - Basics of Humanoid Robotics | Physical AI &amp; Humanoid Robotics Curriculum and Capstone Program"><meta data-rh="true" name="description" content="Learning Objectives"><meta data-rh="true" property="og:description" content="Learning Objectives"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-robotics-curriculum.com/docs/chapter-2-basics-of-humanoid-robotics"><link data-rh="true" rel="alternate" href="https://your-robotics-curriculum.com/docs/chapter-2-basics-of-humanoid-robotics" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-robotics-curriculum.com/docs/chapter-2-basics-of-humanoid-robotics" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"2. Basics of Humanoid Robotics","item":"https://your-robotics-curriculum.com/docs/chapter-2-basics-of-humanoid-robotics"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Physical AI &amp; Humanoid Robotics Curriculum and Capstone Program RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Physical AI &amp; Humanoid Robotics Curriculum and Capstone Program Atom Feed">
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@anthropic-ai/chatkit@latest/dist/chatkit.js"></script><link rel="stylesheet" href="/assets/css/styles.97566511.css">
+<script src="/assets/js/runtime~main.de596feb.js" defer="defer"></script>
+<script src="/assets/js/main.022d8e52.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="Physical AI" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="Physical AI" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI Robotics</b></a><a class="navbar__item navbar__link" href="/docs/intro">Curriculum</a><a class="navbar__item navbar__link" href="/blog">Blog</a><a class="navbar__item navbar__link" href="/chatbot">Chatbot</a><a class="navbar__item navbar__link" href="/login">Login</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/chapter-1-introduction-to-physical-ai"><span title="1. Introduction to Physical AI" class="linkLabel_WmDU">1. Introduction to Physical AI</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/chapter-2-basics-of-humanoid-robotics"><span title="2. Basics of Humanoid Robotics" class="linkLabel_WmDU">2. Basics of Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/chapter-3-ros-2-fundamentals"><span title="3. ROS 2 Fundamentals" class="linkLabel_WmDU">3. ROS 2 Fundamentals</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/chapter-4-digital-twin-simulation"><span title="4. Digital Twin Simulation" class="linkLabel_WmDU">4. Digital Twin Simulation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/chapter-5-vision-language-action-systems"><span title="5. Vision-Language-Action (VLA)" class="linkLabel_WmDU">5. Vision-Language-Action (VLA)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/chapter-6-capstone-ai-robot-pipeline"><span title="6. Capstone Project" class="linkLabel_WmDU">6. Capstone Project</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">2. Basics of Humanoid Robotics</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Chapter 2: Basics of Humanoid Robotics</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives">Learning Objectives<a href="#learning-objectives" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives" translate="no">​</a></h2>
+<p>By the end of this chapter, you will be able to:</p>
+<ul>
+<li class="">Understand the mechanical structure of humanoid robots</li>
+<li class="">Identify key actuator technologies and their trade-offs</li>
+<li class="">Explain the role of sensors in humanoid perception and control</li>
+<li class="">Describe the fundamentals of robot kinematics and dynamics</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="introduction">Introduction<a href="#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction" translate="no">​</a></h2>
+<p>Humanoid robots are designed to mimic human form and movement. Their bipedal structure and anthropomorphic design enable them to navigate human environments and use tools designed for people.</p>
+<p>Building humanoid robots presents unique engineering challenges: achieving stable bipedal locomotion, coordinating dozens of degrees of freedom, and maintaining balance under dynamic conditions.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="core-concepts">Core Concepts<a href="#core-concepts" class="hash-link" aria-label="Direct link to Core Concepts" title="Direct link to Core Concepts" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="mechanical-fundamentals">Mechanical Fundamentals<a href="#mechanical-fundamentals" class="hash-link" aria-label="Direct link to Mechanical Fundamentals" title="Direct link to Mechanical Fundamentals" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="degrees-of-freedom-dof">Degrees of Freedom (DOF)<a href="#degrees-of-freedom-dof" class="hash-link" aria-label="Direct link to Degrees of Freedom (DOF)" title="Direct link to Degrees of Freedom (DOF)" translate="no">​</a></h4>
+<p>A <strong>degree of freedom</strong> is an independent direction of motion. Human-like robots typically have:</p>
+<ul>
+<li class=""><strong>Arms</strong>: 7 DOF per arm (shoulder: 3, elbow: 1, wrist: 3)</li>
+<li class=""><strong>Legs</strong>: 6 DOF per leg (hip: 3, knee: 1, ankle: 2)</li>
+<li class=""><strong>Torso</strong>: 3 DOF (pitch, roll, yaw)</li>
+<li class=""><strong>Head</strong>: 2-3 DOF (pan, tilt, optional roll)</li>
+</ul>
+<p><strong>Total</strong>: 25-30 DOF for a full humanoid</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="kinematic-chains">Kinematic Chains<a href="#kinematic-chains" class="hash-link" aria-label="Direct link to Kinematic Chains" title="Direct link to Kinematic Chains" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Serial chain</strong>: Joints connected in sequence (like an arm)</li>
+<li class=""><strong>Parallel chain</strong>: Multiple actuators control a single joint (increased strength)</li>
+<li class=""><strong>Closed-loop chain</strong>: Forms a loop (used in legs for stability)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="actuator-technologies">Actuator Technologies<a href="#actuator-technologies" class="hash-link" aria-label="Direct link to Actuator Technologies" title="Direct link to Actuator Technologies" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-electric-motors">1. Electric Motors<a href="#1-electric-motors" class="hash-link" aria-label="Direct link to 1. Electric Motors" title="Direct link to 1. Electric Motors" translate="no">​</a></h4>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li class="">Precise position control</li>
+<li class="">High repeatability</li>
+<li class="">Easy to integrate with digital controllers</li>
+</ul>
+<p><strong>Types:</strong></p>
+<ul>
+<li class=""><strong>DC brushless motors</strong>: High efficiency, long lifespan</li>
+<li class=""><strong>Servo motors</strong>: Built-in position feedback</li>
+<li class=""><strong>Stepper motors</strong>: Precise incremental motion</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-hydraulic-actuators">2. Hydraulic Actuators<a href="#2-hydraulic-actuators" class="hash-link" aria-label="Direct link to 2. Hydraulic Actuators" title="Direct link to 2. Hydraulic Actuators" translate="no">​</a></h4>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li class="">High power-to-weight ratio</li>
+<li class="">Suitable for heavy-duty applications</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li class="">Requires hydraulic pump and fluid management</li>
+<li class="">Maintenance-intensive</li>
+<li class="">Risk of leaks</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-pneumatic-actuators">3. Pneumatic Actuators<a href="#3-pneumatic-actuators" class="hash-link" aria-label="Direct link to 3. Pneumatic Actuators" title="Direct link to 3. Pneumatic Actuators" translate="no">​</a></h4>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li class="">Compliant (safe for human interaction)</li>
+<li class="">Lightweight</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li class="">Lower precision than electric motors</li>
+<li class="">Requires compressed air source</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sensors-for-perception-and-control">Sensors for Perception and Control<a href="#sensors-for-perception-and-control" class="hash-link" aria-label="Direct link to Sensors for Perception and Control" title="Direct link to Sensors for Perception and Control" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="vision-sensors">Vision Sensors<a href="#vision-sensors" class="hash-link" aria-label="Direct link to Vision Sensors" title="Direct link to Vision Sensors" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>RGB cameras</strong>: Color imaging for object recognition</li>
+<li class=""><strong>Depth cameras</strong> (e.g., RealSense): 3D environment mapping</li>
+<li class=""><strong>Stereo cameras</strong>: Depth perception through parallax</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="proprioceptive-sensors">Proprioceptive Sensors<a href="#proprioceptive-sensors" class="hash-link" aria-label="Direct link to Proprioceptive Sensors" title="Direct link to Proprioceptive Sensors" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Encoders</strong>: Measure joint angles (position feedback)</li>
+<li class=""><strong>IMU (Inertial Measurement Unit)</strong>: Detects orientation and acceleration</li>
+<li class=""><strong>Force/Torque sensors</strong>: Measure interaction forces at joints</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="tactile-sensors">Tactile Sensors<a href="#tactile-sensors" class="hash-link" aria-label="Direct link to Tactile Sensors" title="Direct link to Tactile Sensors" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Pressure sensors</strong>: Detect contact and grip force</li>
+<li class=""><strong>Skin sensors</strong>: Distributed touch sensing on robot surface</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="kinematics-and-dynamics">Kinematics and Dynamics<a href="#kinematics-and-dynamics" class="hash-link" aria-label="Direct link to Kinematics and Dynamics" title="Direct link to Kinematics and Dynamics" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="forward-kinematics">Forward Kinematics<a href="#forward-kinematics" class="hash-link" aria-label="Direct link to Forward Kinematics" title="Direct link to Forward Kinematics" translate="no">​</a></h4>
+<p>Given joint angles, calculate the end-effector position:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">Position = f(θ₁, θ₂, ..., θₙ)</span><br></span></code></pre></div></div>
+<p><strong>Example</strong>: With 3 joint angles (shoulder, elbow, wrist), determine where the hand is in 3D space.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="inverse-kinematics">Inverse Kinematics<a href="#inverse-kinematics" class="hash-link" aria-label="Direct link to Inverse Kinematics" title="Direct link to Inverse Kinematics" translate="no">​</a></h4>
+<p>Given desired end-effector position, calculate required joint angles:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">(θ₁, θ₂, ..., θₙ) = f⁻¹(desired position)</span><br></span></code></pre></div></div>
+<p><strong>Challenge</strong>: Often has multiple solutions or no solution (workspace limits).</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="dynamics">Dynamics<a href="#dynamics" class="hash-link" aria-label="Direct link to Dynamics" title="Direct link to Dynamics" translate="no">​</a></h4>
+<p>Dynamics govern how forces and torques affect motion. The <strong>equation of motion</strong>:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">τ = M(q)q̈ + C(q,q̇)q̇ + G(q)</span><br></span></code></pre></div></div>
+<p>Where:</p>
+<ul>
+<li class=""><strong>τ</strong>: Joint torques (control input)</li>
+<li class=""><strong>M(q)</strong>: Inertia matrix</li>
+<li class=""><strong>C(q,q̇)</strong>: Coriolis and centrifugal forces</li>
+<li class=""><strong>G(q)</strong>: Gravity forces</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="practical-application">Practical Application<a href="#practical-application" class="hash-link" aria-label="Direct link to Practical Application" title="Direct link to Practical Application" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="walking-control">Walking Control<a href="#walking-control" class="hash-link" aria-label="Direct link to Walking Control" title="Direct link to Walking Control" translate="no">​</a></h3>
+<p>Humanoid walking requires:</p>
+<ol>
+<li class=""><strong>Gait planning</strong>: Define foot trajectories and center of mass motion</li>
+<li class=""><strong>Balance control</strong>: Keep center of pressure within support polygon</li>
+<li class=""><strong>Compliance</strong>: Absorb impacts and adapt to uneven terrain</li>
+</ol>
+<p><strong>Zero Moment Point (ZMP)</strong> is a key stability criterion: the point where the net moment from gravity and inertia is zero.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-simple-balance-controller">Example: Simple Balance Controller<a href="#example-simple-balance-controller" class="hash-link" aria-label="Direct link to Example: Simple Balance Controller" title="Direct link to Example: Simple Balance Controller" translate="no">​</a></h3>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic"># Pseudocode for balance control</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token keyword" style="font-style:italic">def</span><span class="token plain"> </span><span class="token function" style="color:rgb(130, 170, 255)">balance_controller</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain">imu_data</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> target_orientation</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">    error </span><span class="token operator" style="color:rgb(137, 221, 255)">=</span><span class="token plain"> target_orientation </span><span class="token operator" style="color:rgb(137, 221, 255)">-</span><span class="token plain"> imu_data</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token plain">orientation</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">    torque_correction </span><span class="token operator" style="color:rgb(137, 221, 255)">=</span><span class="token plain"> PID_control</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain">error</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">    apply_torque_to_ankle_joints</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain">torque_correction</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><br></span></code></pre></div></div>
+<p>This simple controller adjusts ankle torques to maintain upright posture.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary" translate="no">​</a></h2>
+<p>Humanoid robots combine mechanical design, actuation, sensing, and control to achieve human-like motion. The field draws on mechanical engineering, control theory, and AI to create machines that can navigate and interact with human environments.</p>
+<p><strong>Key Takeaways:</strong></p>
+<ul>
+<li class="">Humanoids have 25-30 degrees of freedom to mimic human motion</li>
+<li class="">Actuator choice (electric, hydraulic, pneumatic) involves trade-offs in power, precision, and safety</li>
+<li class="">Sensors provide feedback for perception (vision) and control (encoders, IMUs)</li>
+<li class="">Kinematics and dynamics are essential for planning and executing motion</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="further-reading">Further Reading<a href="#further-reading" class="hash-link" aria-label="Direct link to Further Reading" title="Direct link to Further Reading" translate="no">​</a></h2>
+<ul>
+<li class="">
+<p><strong>Books</strong>:</p>
+<ul>
+<li class=""><em>Humanoid Robotics: A Reference</em> by Ambarish Goswami and Prahlad Vadakkepat</li>
+<li class=""><em>Introduction to Robotics: Mechanics and Control</em> by John J. Craig</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Research Papers</strong>:</p>
+<ul>
+<li class="">&quot;Bipedal Walking Control Based on Capture Point Dynamics&quot; (IROS 2011)</li>
+<li class="">&quot;Atlas: A Hydraulic Humanoid Robot&quot; by Boston Dynamics</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Online Resources</strong>:</p>
+<ul>
+<li class=""><a href="https://www.nasa.gov/feature/valkyrie" target="_blank" rel="noopener noreferrer" class="">NASA Valkyrie Robot</a></li>
+<li class=""><a href="https://www.unitree.com/h1" target="_blank" rel="noopener noreferrer" class="">Unitree Robotics H1</a></li>
+<li class=""><a href="https://www.ode.org/" target="_blank" rel="noopener noreferrer" class="">Open Dynamics Engine (ODE) Tutorial</a></li>
+</ul>
+</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook/edit/main/my-website/docs/chapter-2-basics-of-humanoid-robotics.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/chapter-1-introduction-to-physical-ai"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">1. Introduction to Physical AI</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/chapter-3-ros-2-fundamentals"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">3. ROS 2 Fundamentals</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#learning-objectives" class="table-of-contents__link toc-highlight">Learning Objectives</a></li><li><a href="#introduction" class="table-of-contents__link toc-highlight">Introduction</a></li><li><a href="#core-concepts" class="table-of-contents__link toc-highlight">Core Concepts</a><ul><li><a href="#mechanical-fundamentals" class="table-of-contents__link toc-highlight">Mechanical Fundamentals</a></li><li><a href="#actuator-technologies" class="table-of-contents__link toc-highlight">Actuator Technologies</a></li><li><a href="#sensors-for-perception-and-control" class="table-of-contents__link toc-highlight">Sensors for Perception and Control</a></li><li><a href="#kinematics-and-dynamics" class="table-of-contents__link toc-highlight">Kinematics and Dynamics</a></li></ul></li><li><a href="#practical-application" class="table-of-contents__link toc-highlight">Practical Application</a><ul><li><a href="#walking-control" class="table-of-contents__link toc-highlight">Walking Control</a></li><li><a href="#example-simple-balance-controller" class="table-of-contents__link toc-highlight">Example: Simple Balance Controller</a></li></ul></li><li><a href="#summary" class="table-of-contents__link toc-highlight">Summary</a></li><li><a href="#further-reading" class="table-of-contents__link toc-highlight">Further Reading</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Read-Books</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/robotics-ai" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discord.gg/your-discord-invite" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://twitter.com/AnthropicAI" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">© Physical AI & Agentic World /n created by AYESHA AAQIL</div></div></div></footer><div style="position:fixed;bottom:20px;right:20px;z-index:9999"></div></div>
+</body>
+</html>
