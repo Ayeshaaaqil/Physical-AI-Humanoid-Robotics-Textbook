@@ -4,7 +4,7 @@ module.exports = {
   tagline: 'A comprehensive curriculum for building intelligent humanoid robots.',
   url: 'https://my-website-45otnabfc-ayesha-aaqils-projects.vercel.app',
   baseUrl: '/',
-  trailingSlash: true,                                                     // Must for GitHub Pages
+  trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -61,7 +61,7 @@ module.exports = {
             label: 'Curriculum',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
-          { to: '/chatbot', label: 'Chatbot', position: 'left' },
+
           { to: '/login', label: 'Login', position: 'left' },
           {
             href: 'https://github.com/Ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook',
