@@ -2,8 +2,8 @@
 module.exports = {
   title: 'Physical AI & Humanoid Robotics Curriculum and Capstone Program',
   tagline: 'A comprehensive curriculum for building intelligent humanoid robots.',
-  url: 'https://ayeshaaaqil.github.io',                                    // Your GitHub Pages URL
-  baseUrl: '/Physical-AI-Humanoid-Robotics-Textbook/',                      // Repo name + trailing slash
+  url: 'https://my-website-45otnabfc-ayesha-aaqils-projects.vercel.app',
+  baseUrl: '/',
   trailingSlash: true,                                                     // Must for GitHub Pages
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -13,7 +13,7 @@ module.exports = {
   organizationName: 'ayeshaaaqil',                 // lowercase username
   projectName: 'Physical-AI-Humanoid-Robotics-Textbook', // exact repo name
 
-  clientModules: [require.resolve('./src/theme/Root.js')],
+
 
   scripts: [
     'https://cdn.jsdelivr.net/npm/@anthropic-ai/chatkit@latest/dist/chatkit.js',
