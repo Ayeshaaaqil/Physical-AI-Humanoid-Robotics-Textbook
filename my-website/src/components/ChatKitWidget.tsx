@@ -35,8 +35,38 @@ const ChatKitWidget = () => {
   useEffect(() => {
     if (chatkitLoaded && chatContainerRef.current) {
       try {
+        // Create a custom API handler for ChatKit
+        const customApiHandler = {
+          // Override ChatKit's default API calls with fetch
+          async sendUserMessage(threadId, message, attachments) {
+            try {
+              const response = await fetch('/api/chat/', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  thread_id: threadId,
+                  input: { message, attachments }
+                })
+              });
+
+              if (!response.ok) {
+                throw new Error(`API request failed with status ${response.status}`);
+              }
+
+              const data = await response.json();
+              return data;
+            } catch (error) {
+              console.error('Error sending message:', error);
+              return [{ type: 'error.response', content: `Error: ${error.message}` }];
+            }
+          }
+        };
+
         const chat = new window.ChatKit({
-          apiUrl: 'http://localhost:8000/chat', // Your FastAPI backend URL
+          // Use a custom API handler instead of apiUrl
+          customApiHandler: customApiHandler,
           element: chatContainerRef.current,
           config: {
             defaultParticipant: {
