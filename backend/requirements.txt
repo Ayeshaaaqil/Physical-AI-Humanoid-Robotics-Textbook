@@ -1,8 +1,3 @@
-fastapi==0.100.0       # Agar aap FastAPI use kar rahi ho
-uvicorn==0.23.0        # FastAPI server ke liye
-requests==2.31.0       # Agar HTTP requests kar rahi ho
-python-dotenv==1.0.0   # Environment variables ke liye
-trafilatura
-qdrant-client
-cohere
-pydantic
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0

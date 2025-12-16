@@ -1,0 +1,32 @@
+# Ignore Python virtual environment
+my-website/venv/
+
+# Ignore Python cache directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Node.js modules
+node_modules/
+
+# Ignore Git directory
+.git/
+
+# Ignore temporary files and logs
+tmp/
+*.log
+*.tmp
+
+# Ignore environment variables file
+.env
+
+# Ignore editor and IDE-specific files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*~
+.huggingface/
+.cache/
+.pytest_cache/

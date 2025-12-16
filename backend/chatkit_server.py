@@ -29,4 +29,4 @@ class ChatKitServer(Generic[T]):
         self.store = data_store
 
     async def respond(self, thread: ThreadMetadata, input: Any, context: T) -> AsyncIterator:
-        yield {"type": "dummy.response", "content": "This is a dummy ChatKitServer response."}
+        yield {"type": "assistant.response", "content": "This is a dummy ChatKitServer response. In a full implementation, this would connect to a real AI model."}
