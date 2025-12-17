@@ -26,10 +26,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/Ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook/edit/main/',
         },
-        blog: {
-          showReadingTime: true,
-          editUrl: 'https://github.com/Ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook/edit/main/blog/',
-        },
+        
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -58,9 +55,7 @@ module.exports = {
             position: 'left',
             label: 'Curriculum',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
           { to: '/chatbot', label: 'Chatbot', position: 'left' },
-          { to: '/login', label: 'Login', position: 'left' },
           {
             href: 'https://github.com/Ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook',
             label: 'GitHub',
