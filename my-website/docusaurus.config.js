@@ -2,7 +2,7 @@
 module.exports = {
   title: 'Physical AI & Humanoid Robotics Curriculum and Capstone Program',
   tagline: 'A comprehensive curriculum for building intelligent humanoid robots.',
-  url: 'https://my-website-45otnabfc-ayesha-aaqils-projects.vercel.app',
+  url: 'https://my-website-two-weld-92.vercel.app/',
   baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
