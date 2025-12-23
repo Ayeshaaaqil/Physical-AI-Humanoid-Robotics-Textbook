@@ -1,184 +1,154 @@
-import React, { useState, useRef, useEffect } from 'react';
-
-// Define types for messages
-interface Message {
-  id: string;
-  content: string;
-  role: 'user' | 'assistant';
-  timestamp: Date;
-}
+import React, { useEffect, useState, useRef } from 'react';
 
 const ChatKitWidget = () => {
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [inputValue, setInputValue] = useState<string>('');
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [threadId] = useState<string>('default-thread');
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const [chatkitLoaded, setChatkitLoaded] = useState(false);
+  const chatContainerRef = useRef(null);
 
-  // Scroll to bottom on messages change
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+    // Check if ChatKit script is already loaded
+    if (window.ChatKit) {
+      setChatkitLoaded(true);
+      return;
+    }
 
-  // Focus input on mount
-  useEffect(() => {
-    inputRef.current?.focus();
+    // Create script element
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/@anthropic-ai/chatkit@latest/dist/chatkit.js';
+    script.async = true;
+    script.onload = () => {
+      setChatkitLoaded(true);
+      console.log('ChatKit script loaded successfully');
+    };
+    script.onerror = (error) => {
+      console.error('Failed to load ChatKit script:', error);
+    };
+
+    // Append script to document body
+    document.body.appendChild(script);
+
+    return () => {
+      // Clean up script on component unmount
+      document.body.removeChild(script);
+    };
   }, []);
 
-  // Set deployed backend URL
-  const BACKEND_URL = 'https://ayesha-aaqil-rag-chatbot.hf.space';
+  useEffect(() => {
+    if (chatkitLoaded && chatContainerRef.current) {
+      try {
+        // Create a custom API handler for ChatKit
+        const customApiHandler = {
+          // Override ChatKit's default API calls with fetch
+          async sendUserMessage(threadId, message, attachments) {
+            try {
+              // Get selected text
+              const selectedText = window.getSelection().toString().trim();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!inputValue.trim() || isLoading) return;
-
-    // Add user message
-    const userMessage: Message = {
-      id: Date.now().toString(),
-      content: inputValue,
-      role: 'user',
-      timestamp: new Date(),
-    };
-    setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
-    setIsLoading(true);
-
-    try {
-      const response = await fetch(`${BACKEND_URL}/api/chat`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ thread_id: threadId, input: { message: inputValue } }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`API request failed with status ${response.status}`);
-      }
-
-      if (!response.body) throw new Error('ReadableStream not supported');
-
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-      let fullResponse = '';
-
-      const assistantMessageId = `assistant-${Date.now()}`;
-      const initialAssistantMessage: Message = {
-        id: assistantMessageId,
-        content: '',
-        role: 'assistant',
-        timestamp: new Date(),
-      };
-      setMessages(prev => [...prev, initialAssistantMessage]);
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        const chunk = decoder.decode(value, { stream: true });
-        const lines = chunk.split('\n');
-        for (const line of lines) {
-          if (line.startsWith('data: ')) {
-            const data = line.slice(6);
-            if (data && data !== '[DONE]') {
-              try {
-                const parsed = JSON.parse(data);
-                if (parsed.content) {
-                  fullResponse += parsed.content;
-                  setMessages(prev =>
-                    prev.map(msg =>
-                      msg.id === assistantMessageId ? { ...msg, content: fullResponse } : msg
-                    )
-                  );
-                }
-              } catch {
-                // Append non-JSON data as plain text
-                fullResponse += data;
-                setMessages(prev =>
-                  prev.map(msg =>
-                    msg.id === assistantMessageId ? { ...msg, content: fullResponse } : msg
-                  )
-                );
+              // Ask user if they want to use selected text if text is selected
+              let useSelectedText = false;
+              if (selectedText) {
+                useSelectedText = window.confirm(`You have selected text: "${selectedText.substring(0, 50)}...". Do you want to ask about this selected text?`);
               }
+
+              const payload = {
+                session_id: threadId || `session_${Date.now()}`,
+                message: message,
+                mode: useSelectedText ? "selected-text" : "full-book",
+                ...(useSelectedText && { selected_text: selectedText })
+              };
+
+              const response = await fetch('http://localhost:8000/api/v1/chat', { // Correct endpoint with API version
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload)
+              });
+
+              if (!response.ok) {
+                throw new Error(`API request failed with status ${response.status}`);
+              }
+
+              const data = await response.json();
+
+              // Format the response to match ChatKit expectations
+              return [{
+                type: 'text.response',
+                content: data.response,
+                sources: data.sources || []
+              }];
+            } catch (error) {
+              console.error('Error sending message:', error);
+              return [{ type: 'error.response', content: `Error: ${error.message}` }];
             }
           }
-        }
+        };
+
+        const chat = new window.ChatKit({
+          // Use a custom API handler instead of apiUrl
+          customApiHandler: customApiHandler,
+          element: chatContainerRef.current,
+          config: {
+            defaultParticipant: {
+              name: 'Physical AI Assistant',
+              avatarUrl: '/img/logo.svg',
+            },
+            placeholder: 'Ask me about Physical AI, robotics, ROS 2, digital twins...',
+            theme: {
+              // Custom theme for better integration with Docusaurus
+              primaryColor: '#007cba', // Docusaurus primary color
+              secondaryColor: '#f0f8ff',
+              backgroundColor: '#ffffff',
+              textColor: '#222222',
+              inputBackgroundColor: '#ffffff',
+              inputTextColor: '#222222',
+              borderRadius: '8px',
+              fontSize: '14px',
+              fontFamily: 'system-ui, -apple-system, sans-serif',
+            },
+          },
+        });
+        chat.render();
+        console.log('ChatKit widget rendered');
+      } catch (error) {
+        console.error('Error rendering ChatKit widget:', error);
       }
-    } catch (error) {
-      console.error('Error sending message:', error);
-      const errorMessage: Message = {
-        id: `error-${Date.now()}`,
-        content: `Error: ${(error as Error).message || 'Failed to send message'}`,
-        role: 'assistant',
-        timestamp: new Date(),
-      };
-      setMessages(prev => [...prev, errorMessage]);
-    } finally {
-      setIsLoading(false);
     }
-  };
+  }, [chatkitLoaded]);
 
   return (
-    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      {/* Chat Header */}
-      <div style={{ padding: '1rem', fontWeight: 'bold', borderBottom: '1px solid gray' }}>
-        AI Assistant
-      </div>
-
-      {/* Messages */}
-      <div style={{ flex: 1, overflowY: 'auto', padding: '1rem', display: 'flex', flexDirection: 'column' }}>
-        {messages.length === 0 ? (
-          <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            Ask me anything about humanoid robotics...
+    <div
+      ref={chatContainerRef}
+      style={{
+        height: 'calc(100vh - var(--ifm-navbar-height))',
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      {!chatkitLoaded && (
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
+          backgroundColor: '#f8f9fa',
+          borderRadius: '8px',
+          margin: '1rem'
+        }}>
+          <div style={{
+            textAlign: 'center',
+            padding: '2rem'
+          }}>
+            <div style={{
+              fontSize: '1.5rem',
+              marginBottom: '1rem'
+            }}>
+              🤖
+            </div>
+            <p>Loading Physical AI Assistant...</p>
           </div>
-        ) : (
-          <>
-            {messages.map(msg => (
-              <div
-                key={msg.id}
-                style={{
-                  marginBottom: '1rem',
-                  alignSelf: msg.role === 'user' ? 'flex-end' : 'flex-start',
-                  maxWidth: '80%',
-                }}
-              >
-                <div
-                  style={{
-                    padding: '0.75rem',
-                    borderRadius: '0.5rem',
-                    backgroundColor: msg.role === 'user' ? '#1f6feb' : '#f0f0f0',
-                    color: msg.role === 'user' ? 'white' : 'black',
-                  }}
-                >
-                  {msg.content}
-                </div>
-                <small style={{ display: 'block', marginTop: '0.25rem', fontSize: '0.75rem', textAlign: 'right' }}>
-                  {msg.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                </small>
-              </div>
-            ))}
-            {isLoading && <div style={{ color: 'gray' }}>Thinking...</div>}
-            <div ref={messagesEndRef} />
-          </>
-        )}
-      </div>
-
-      {/* Input */}
-      <form onSubmit={handleSubmit} style={{ padding: '1rem', borderTop: '1px solid gray' }}>
-        <div style={{ display: 'flex', gap: '0.5rem' }}>
-          <input
-            ref={inputRef}
-            type="text"
-            value={inputValue}
-            onChange={e => setInputValue(e.target.value)}
-            placeholder="Type your message..."
-            disabled={isLoading}
-            style={{ flex: 1, padding: '0.5rem', borderRadius: '0.25rem', border: '1px solid gray' }}
-          />
-          <button type="submit" disabled={!inputValue.trim() || isLoading} style={{ padding: '0.5rem 1rem' }}>
-            Send
-          </button>
         </div>
-      </form>
+      )}
     </div>
   );
 };
