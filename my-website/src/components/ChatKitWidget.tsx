@@ -40,15 +40,28 @@ const ChatKitWidget = () => {
           // Override ChatKit's default API calls with fetch
           async sendUserMessage(threadId, message, attachments) {
             try {
-              const response = await fetch('/api/chat/', {
+              // Get selected text
+              const selectedText = window.getSelection().toString().trim();
+
+              // Ask user if they want to use selected text if text is selected
+              let useSelectedText = false;
+              if (selectedText) {
+                useSelectedText = window.confirm(`You have selected text: "${selectedText.substring(0, 50)}...". Do you want to ask about this selected text?`);
+              }
+
+              const payload = {
+                session_id: threadId || `session_${Date.now()}`,
+                message: message,
+                mode: useSelectedText ? "selected-text" : "full-book",
+                ...(useSelectedText && { selected_text: selectedText })
+              };
+
+              const response = await fetch('http://localhost:8000/api/v1/chat', { // Correct endpoint with API version
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                  thread_id: threadId,
-                  input: { message, attachments }
-                })
+                body: JSON.stringify(payload)
               });
 
               if (!response.ok) {
@@ -56,7 +69,13 @@ const ChatKitWidget = () => {
               }
 
               const data = await response.json();
-              return data;
+
+              // Format the response to match ChatKit expectations
+              return [{
+                type: 'text.response',
+                content: data.response,
+                sources: data.sources || []
+              }];
             } catch (error) {
               console.error('Error sending message:', error);
               return [{ type: 'error.response', content: `Error: ${error.message}` }];
@@ -70,10 +89,22 @@ const ChatKitWidget = () => {
           element: chatContainerRef.current,
           config: {
             defaultParticipant: {
-              name: 'AI Assistant',
+              name: 'Physical AI Assistant',
               avatarUrl: '/img/logo.svg',
             },
-            placeholder: 'Ask me anything about humanoid robotics...',
+            placeholder: 'Ask me about Physical AI, robotics, ROS 2, digital twins...',
+            theme: {
+              // Custom theme for better integration with Docusaurus
+              primaryColor: '#007cba', // Docusaurus primary color
+              secondaryColor: '#f0f8ff',
+              backgroundColor: '#ffffff',
+              textColor: '#222222',
+              inputBackgroundColor: '#ffffff',
+              inputTextColor: '#222222',
+              borderRadius: '8px',
+              fontSize: '14px',
+              fontFamily: 'system-ui, -apple-system, sans-serif',
+            },
           },
         });
         chat.render();
@@ -95,7 +126,28 @@ const ChatKitWidget = () => {
       }}
     >
       {!chatkitLoaded && (
-        <p>Loading ChatKit widget...</p>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
+          backgroundColor: '#f8f9fa',
+          borderRadius: '8px',
+          margin: '1rem'
+        }}>
+          <div style={{
+            textAlign: 'center',
+            padding: '2rem'
+          }}>
+            <div style={{
+              fontSize: '1.5rem',
+              marginBottom: '1rem'
+            }}>
+              🤖
+            </div>
+            <p>Loading Physical AI Assistant...</p>
+          </div>
+        </div>
       )}
     </div>
   );
