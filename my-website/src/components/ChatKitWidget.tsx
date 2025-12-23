@@ -26,11 +26,8 @@ const ChatKitWidget = () => {
     inputRef.current?.focus();
   }, []);
 
-  // Determine backend URL dynamically
-  const BACKEND_URL =
-    window.location.hostname.includes('localhost')
-      ? 'http://localhost:8000'
-      : 'https://my-website-two-weld-92.vercel.app';
+  // Set deployed backend URL
+  const BACKEND_URL = 'https://ayesha-aaqil-rag-chatbot.hf.space';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -159,7 +156,7 @@ const ChatKitWidget = () => {
                 </small>
               </div>
             ))}
-            {isLoading && <div>Thinking...</div>}
+            {isLoading && <div style={{ color: 'gray' }}>Thinking...</div>}
             <div ref={messagesEndRef} />
           </>
         )}
