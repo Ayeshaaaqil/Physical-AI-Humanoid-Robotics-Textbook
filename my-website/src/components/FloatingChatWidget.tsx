@@ -5,7 +5,7 @@ const FloatingChatWidget: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hasUnread, setHasUnread] = useState(false);
 
-  // Show unread indicator when component mounts (first time)
+  // Check first visit to show unread indicator
   useEffect(() => {
     const hasVisitedBefore = localStorage.getItem('chatbot-visited');
     if (!hasVisitedBefore) {
@@ -15,10 +15,10 @@ const FloatingChatWidget: React.FC = () => {
   }, []);
 
   const toggleChat = () => {
-    setIsOpen(!isOpen);
-    if (isOpen) {
-      setHasUnread(false); // Clear unread indicator when chat is opened
-    }
+    setIsOpen(prev => {
+      if (!prev) setHasUnread(false); // Clear unread only when opening
+      return !prev;
+    });
   };
 
   return (
@@ -43,7 +43,7 @@ const FloatingChatWidget: React.FC = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
             transition: 'all 0.3s ease',
           }}
           onMouseEnter={(e) => {
@@ -68,7 +68,7 @@ const FloatingChatWidget: React.FC = () => {
           >
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
           </svg>
-          
+
           {/* Unread indicator */}
           {hasUnread && (
             <span
@@ -106,9 +106,10 @@ const FloatingChatWidget: React.FC = () => {
             zIndex: 1000,
             borderRadius: '8px',
             overflow: 'hidden',
-            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2)',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
           }}
         >
+          {/* Chat Header */}
           <div
             style={{
               display: 'flex',
@@ -122,13 +123,14 @@ const FloatingChatWidget: React.FC = () => {
             <h3 style={{ margin: 0, fontSize: '16px' }}>AI Assistant</h3>
             <button
               onClick={toggleChat}
+              aria-label="Close chatbot"
               style={{
                 background: 'none',
                 border: 'none',
                 color: 'white',
                 cursor: 'pointer',
                 fontSize: '18px',
-                padding: '0',
+                padding: 0,
                 width: '24px',
                 height: '24px',
                 display: 'flex',
@@ -139,6 +141,8 @@ const FloatingChatWidget: React.FC = () => {
               ×
             </button>
           </div>
+
+          {/* Chat Body */}
           <div style={{ height: 'calc(100% - 46px)', overflow: 'hidden' }}>
             <ChatKitWidget />
           </div>
