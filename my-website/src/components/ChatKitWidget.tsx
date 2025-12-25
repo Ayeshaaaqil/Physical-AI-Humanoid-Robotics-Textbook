@@ -50,13 +50,12 @@ const ChatKitWidget = () => {
               }
 
               const payload = {
-                session_id: threadId || `session_${Date.now()}`,
-                message: message,
-                mode: useSelectedText ? "selected-text" : "full-book",
-                ...(useSelectedText && { selected_text: selectedText })
+                session_id: threadId || `session_${Date.now()}`, // Changed to match backend: session_id instead of thread_id
+                message: useSelectedText ? `${message} - Context: ${selectedText}` : message, // Changed to match backend: message instead of input
+                mode: useSelectedText ? "selected-text" : "full-book" // Added required mode field
               };
 
-              const response = await fetch('http://localhost:8000/api/v1/chat', { // Correct endpoint with API version
+              const response = await fetch('https://humanoid-robortics-sluk.vercel.app/api/v1/chat', { // Updated to actual deployed endpoint
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
@@ -65,7 +64,8 @@ const ChatKitWidget = () => {
               });
 
               if (!response.ok) {
-                throw new Error(`API request failed with status ${response.status}`);
+                const errorText = await response.text();
+                throw new Error(`API request failed with status ${response.status}: ${errorText}`);
               }
 
               const data = await response.json();
