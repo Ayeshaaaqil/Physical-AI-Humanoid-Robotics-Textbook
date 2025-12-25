@@ -2,8 +2,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import Layout from '@theme/Layout';
 
 const BACKEND_URL = typeof window !== 'undefined'
-  ? 'http://localhost:8000'
-  : process.env.BACKEND_URL || 'https://ayesha-aaqil-rag-chatbot.hf.space';
+  ? 'humanoid-robortics-sluk-5ykptpq93-ayesha-aaqils-projects.vercel.app'
+  : process.env.BACKEND_URL || 'humanoid-robortics-sluk-5ykptpq93-ayesha-aaqils-projects.vercel.app
+';
 
 const ChatPage = () => {
   const [input, setInput] = useState('');
