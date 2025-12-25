@@ -6,7 +6,10 @@ module.exports = {
   baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    format: 'mdx',
+    mermaid: true,
+  },
   favicon: 'img/favicon.ico',
 
   // GitHub deployment config (yeh dono bilkul exact hone chahiye)
@@ -95,7 +98,6 @@ module.exports = {
           {
             title: 'More',
             items: [
-              { label: 'Blog', to: '/blog' },
               {
                 label: 'GitHub',
                 href: 'https://github.com/Ayeshaaaqil/Physical-AI-Humanoid-Robotics-Textbook',

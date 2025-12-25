@@ -3,8 +3,7 @@ import Layout from '@theme/Layout';
 
 const BACKEND_URL = typeof window !== 'undefined'
   ? 'humanoid-robortics-sluk-5ykptpq93-ayesha-aaqils-projects.vercel.app'
-  : process.env.BACKEND_URL || 'humanoid-robortics-sluk-5ykptpq93-ayesha-aaqils-projects.vercel.app
-';
+  : process.env.BACKEND_URL || 'humanoid-robortics-sluk-5ykptpq93-ayesha-aaqils-projects.vercel.app';
 
 const ChatPage = () => {
   const [input, setInput] = useState('');
